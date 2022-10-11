@@ -7,5 +7,19 @@ public class ConsoleExercises {
 
         System.out.print("Enter an integer: ");
         int userInput = scanner.nextInt();
+        System.out.println(userInput);
+
+        System.out.print("Enter 3 words: ");
+        String word1 = scanner.next();
+        String word2 = scanner.next();
+        String word3 = scanner.next();
+        System.out.println(word2);
+
+        System.out.print("Enter a sentence: ");
+        scanner.nextLine();
+        String sentence = scanner.nextLine();
+        System.out.println(sentence);
+
+
     }
 }
