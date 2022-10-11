@@ -16,9 +16,9 @@ public class ControlFlowExercises {
         }while (i > -10);
         i += 12;
         System.out.println(i);
-//        do {
-//            i *= i;
-//            System.out.println(i);
-//        }while (i < 1000000);
+        do {
+            i = i * i;
+            System.out.println(i);
+        }while (i < 50000);
     }
 }
