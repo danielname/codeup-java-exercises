@@ -26,9 +26,19 @@ public class ConsoleExercises {
         System.out.println("Enter the width of the classroom in feet (numbers only): ");
         String width = scanner.nextLine();
 
+        System.out.println("Enter the height of the classroom in feet (numbers only): ");
+        String height = scanner.nextLine();
+
         int parsedLength = Integer.parseInt(length);
         int parsedWidth = Integer.parseInt(width);
         int classArea = parsedLength * parsedWidth;
         System.out.println(classArea);
+
+        Double doubleParsedLength = Double.parseDouble(length);
+        Double doubleParsedWidth = Double.parseDouble(width);
+        Double doubleParsedHeight = Double.parseDouble(height);
+
+        double volume = doubleParsedLength * doubleParsedWidth * doubleParsedHeight;
+
     }
 }
