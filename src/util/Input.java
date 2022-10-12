@@ -12,7 +12,7 @@ public class Input {
         System.out.println("yes or no?");
         return scanner1.next().charAt(0) == 'y';
     }
-    int getInt(int min, int max){
+    static int getInt(int min, int max){
         Scanner scanner1 = new Scanner(System.in);
         System.out.printf("Pick a number between %s and %s: %n", min, max);
         int dnNumberPick = scanner1.nextInt();
@@ -21,6 +21,8 @@ public class Input {
         } else return getInt(min, max);
     }
     static int getInt(){
+        Scanner scanner1 = new Scanner(System.in);
+        System.out.println("Enter a number: ");
         return scanner.nextInt();
     }
     static double getDouble(double min, double max){
@@ -32,6 +34,8 @@ public class Input {
         } else return getDouble(min, max);
     }
     double getDouble (){
+        Scanner scanner1 = new Scanner(System.in);
+        System.out.println("Enter a number: ");
         return scanner.nextDouble();
     }
 
