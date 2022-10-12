@@ -17,4 +17,11 @@ public class MethodsExercises {
     public static int modulus(int a, int b){
         return a % b;
     }
+    public static int multiplicationBonus(int a, int b){
+        int dnAValue = a;
+        for (int i = 1; i < b; i++){
+            dnAValue += a;
+        }
+        return dnAValue;
+    }
 }
