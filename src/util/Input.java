@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Input {
     private Scanner scanner;
     String getString(){
-
+        return scanner.nextLine();
     }
     boolean yesNo(){
         Scanner scanner1 = new Scanner(System.in);
