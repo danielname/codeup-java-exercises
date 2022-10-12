@@ -1,6 +1,6 @@
 public class MethodsExercises {
     public static void main(String[] args) {
-
+        System.out.println(factorial(5));
     }
     public static int addition(int a, int b){
         return a + b;
@@ -23,5 +23,12 @@ public class MethodsExercises {
             dnAValue += a;
         }
         return dnAValue;
+    }
+    public static int factorial(int a){
+        int x = a;
+        for (int i = 1; i < a; i++){
+            x *= i;
+        }
+        return x;
     }
 }
