@@ -24,7 +24,12 @@ public class Input {
 
     }
     double getDouble (double min, double max){
-
+        Scanner scanner1 = new Scanner(System.in);
+        System.out.printf("Pick a number between %s and %s: %n", min, max);
+        double dnNumberPick = scanner.nextDouble();
+        if (dnNumberPick > min && dnNumberPick < max){
+            return dnNumberPick;
+        } else return getDouble(min, max);
     }
     double getDouble (){
 
