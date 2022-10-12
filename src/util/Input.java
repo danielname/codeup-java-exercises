@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 public class Input {
     private static Scanner scanner;
-    String getString(){
-        return scanner.nextLine();
+    static String getString(){
+        Scanner scanner1 = new Scanner(System.in);
+        System.out.println("Input a string: ");
+        return scanner1.nextLine();
     }
     static boolean yesNo(){
         Scanner scanner1 = new Scanner(System.in);
@@ -23,7 +25,7 @@ public class Input {
     static int getInt(){
         Scanner scanner1 = new Scanner(System.in);
         System.out.println("Enter a number: ");
-        return scanner.nextInt();
+        return scanner1.nextInt();
     }
     static double getDouble(double min, double max){
         Scanner scanner1 = new Scanner(System.in);
@@ -33,10 +35,10 @@ public class Input {
             return dnNumberPick;
         } else return getDouble(min, max);
     }
-    double getDouble (){
+    static double getDouble(){
         Scanner scanner1 = new Scanner(System.in);
         System.out.println("Enter a number: ");
-        return scanner.nextDouble();
+        return scanner1.nextDouble();
     }
 
     public static void main(String[] args) {
