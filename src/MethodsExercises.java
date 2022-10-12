@@ -1,6 +1,7 @@
+import java.util.Scanner;
 public class MethodsExercises {
     public static void main(String[] args) {
-        System.out.println(factorial(5));
+
     }
     public static int addition(int a, int b){
         return a + b;
@@ -23,6 +24,14 @@ public class MethodsExercises {
             dnAValue += a;
         }
         return dnAValue;
+    }
+    public static int getInteger(int min, int max){
+        Scanner scanner = new Scanner(System.in);
+        System.out.printf("Pick a number between %s and %s: %n", min, max);
+        int dnNumberPick = scanner.nextInt();
+        if (dnNumberPick > min && dnNumberPick < max){
+            return dnNumberPick;
+        } else return getInteger(min, max);
     }
     public static int factorial(int a){
         int x = a;
