@@ -21,7 +21,7 @@ public class Input {
         } else return getInt(min, max);
     }
     int getInt(){
-
+        return scanner.nextInt();
     }
     double getDouble (double min, double max){
         Scanner scanner1 = new Scanner(System.in);
@@ -32,7 +32,7 @@ public class Input {
         } else return getDouble(min, max);
     }
     double getDouble (){
-
+        return scanner.nextDouble();
     }
 
     public static void main(String[] args) {
