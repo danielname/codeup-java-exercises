@@ -7,7 +7,7 @@ public class Input {
     String getString(){
         return scanner.nextLine();
     }
-    boolean yesNo(){
+    static boolean yesNo(){
         Scanner scanner1 = new Scanner(System.in);
         System.out.println("yes or no?");
         return scanner1.next().charAt(0) == 'y';
@@ -20,7 +20,7 @@ public class Input {
             return dnNumberPick;
         } else return getInt(min, max);
     }
-    int getInt(){
+    static int getInt(){
         return scanner.nextInt();
     }
     double getDouble (double min, double max){
