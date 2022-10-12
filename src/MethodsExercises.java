@@ -40,4 +40,17 @@ public class MethodsExercises {
         }
         return x;
     }
+    public static int dice(int a){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("would you like to roll the dice? y/n");
+        char dnDiceChoice = scanner.next().charAt(0);
+        if (dnDiceChoice == 'y'){
+            int dnFirstDie = (int) (Math.random() * a) + 1;
+            int dnSecondDie = (int) (Math.random() * a) + 1;
+            System.out.printf("The first die rolled %s, and the second landed on %s giving you a total of %s.%n",dnFirstDie,dnSecondDie,(dnFirstDie + dnSecondDie));
+        }else {
+            System.out.println("ok :(");
+        }
+        return //something;
+    }
 }
