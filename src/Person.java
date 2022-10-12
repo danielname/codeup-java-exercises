@@ -1,24 +1,23 @@
 import java.util.Scanner;
 public class Person {
-    public static void main(String[] args) {
-
-    }
-    public Person(String name){
-        return //something;
-    }
+//    public Person(String name){
+//        return //something;
+//    }
     private String name;
 
-    public String getName(){
+    public static String getName(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("What is your name?");
         return scanner.next();
     }
 
-    public void setName(String name){
-        name = getName();
-        return name;
+//    public void setName(String name){
+//        return name;
+//    }
+    public static void sayHello(){
+        System.out.printf("Hello %s!%n",getName());
     }
-    public void sayHello(){
-//TODO: print a message to the console using the person's name
+    public static void main(String[] args) {
+        sayHello();
     }
 }
