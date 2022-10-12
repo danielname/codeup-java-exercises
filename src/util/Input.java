@@ -3,7 +3,7 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scanner;
+    private static Scanner scanner;
     String getString(){
         return scanner.nextLine();
     }
@@ -15,7 +15,7 @@ public class Input {
     int getInt(int min, int max){
         Scanner scanner1 = new Scanner(System.in);
         System.out.printf("Pick a number between %s and %s: %n", min, max);
-        int dnNumberPick = scanner.nextInt();
+        int dnNumberPick = scanner1.nextInt();
         if (dnNumberPick > min && dnNumberPick < max){
             return dnNumberPick;
         } else return getInt(min, max);
@@ -23,10 +23,10 @@ public class Input {
     static int getInt(){
         return scanner.nextInt();
     }
-    double getDouble (double min, double max){
+    static double getDouble(double min, double max){
         Scanner scanner1 = new Scanner(System.in);
         System.out.printf("Pick a number between %s and %s: %n", min, max);
-        double dnNumberPick = scanner.nextDouble();
+        double dnNumberPick = scanner1.nextDouble();
         if (dnNumberPick > min && dnNumberPick < max){
             return dnNumberPick;
         } else return getDouble(min, max);
