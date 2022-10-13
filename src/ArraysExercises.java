@@ -7,4 +7,12 @@ public class ArraysExercises {
         people[1] = new Person("Daniel");
         people[2] = new Person("Raj");
     }
+    public static Person[] addPerson(Person[] people, Person person){
+        Person[] extraPerson = new Person[people.length + 1];
+        for (int i = 0; i < people.length; i++){
+            extraPerson[i] = people[i];
+        }
+        extraPerson[extraPerson.length - 1] = person;
+        return extraPerson;
+    }
 }
