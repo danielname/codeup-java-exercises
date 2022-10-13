@@ -13,6 +13,10 @@ public class Movie {
     public Movie(){
             name = "null";
             category = "null";
-    };
+    }
+    public Movie(String title, String genre){
+        name = title;
+        category = genre;
+    }
 
 }
