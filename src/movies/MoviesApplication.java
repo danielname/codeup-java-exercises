@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class MoviesApplication {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
                 What would you like to do?
@@ -16,36 +17,35 @@ public class MoviesApplication {
                 5 - view movies in the scifi category""");
         byte dnUserChoice = scanner.nextByte();
         if (dnUserChoice == 5) {
-            for (datatype item : array) {
-                if (item.setCategory().equals("scifi")) {
-                    System.out.printf("%s -- %s", item.setName(), item.setCategory());
+            for (Movie item : MoviesArray.findAll()) {
+                if (item.checkCategory().equals("scifi")) {
+                    System.out.printf("%s -- %s", item.checkName(), item.checkCategory());
                 }
             }
-            } else if (dnUserChoice == 4) {
-                for (datatype item : array) {
-                    if (item.setCategory().equals("scifi")) {
-                        System.out.printf("%s -- %s", item.setName(), item.setCategory());
-                    }
+        } else if (dnUserChoice == 4) {
+            for (Movie item : MoviesArray.findAll()) {
+                if (item.checkCategory().equals("horror")) {
+                    System.out.printf("%s -- %s", item.checkName(), item.checkCategory());
                 }
-            } else if (dnUserChoice == 3) {
-                    for (datatype item : array) {
-                        if (item.setCategory().equals("scifi")) {
-                            System.out.printf("%s -- %s", item.setName(), item.setCategory());
-                        }
-                    }
-            } else if (dnUserChoice == 2) {
-                        for (datatype item : array) {
-                            if (item.setCategory().equals("scifi")) {
-                                System.out.printf("%s -- %s", item.setName(), item.setCategory());
-                            }
-                        }
-            } else if (dnUserChoice == 1) {
-            for (datatype item : array) {
-                System.out.printf("%s -- %s", item.setName(), item.setCategory());
             }
-        }else {
-
+        } else if (dnUserChoice == 3) {
+            for (Movie item : MoviesArray.findAll()) {
+                if (item.checkCategory().equals("drama")) {
+                    System.out.printf("%s -- %s", item.checkName(), item.checkCategory());
+                }
             }
+        } else if (dnUserChoice == 2) {
+            for (Movie item : MoviesArray.findAll()) {
+                if (item.checkCategory().equals("animated")) {
+                    System.out.printf("%s -- %s", item.checkName(), item.checkCategory());
+                }
+            }
+        } else if (dnUserChoice == 1) {
+            for (Movie item : MoviesArray.findAll()) {
+                System.out.printf("%s -- %s", item.checkName(), item.checkCategory());
+            }
+        } else {
+            System.exit(0);
         }
     }
 }

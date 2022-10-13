@@ -2,14 +2,22 @@ package movies;
 
 public class Movie {
 
-        private static String name;
-        public String setName(String name){
-            return Movie.name = name;
-        }
-        private static String category;
-        public static String setCategory(String category){
-            return Movie.category = category;
-        }
+    private String name;
+    private String category;
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setCategory(String category){
+        this.category = category;
+    }
+    public String checkCategory(){
+        return this.category;
+    }
+    public String checkName(){
+        return this.name;
+    }
     public Movie(){
             name = "null";
             category = "null";
