@@ -23,8 +23,8 @@ public class Movie {
             category = "null";
     }
     public Movie(String title, String genre){
-        name = title;
-        category = genre;
+        setName(title);
+        setCategory(genre);
     }
 
 }
