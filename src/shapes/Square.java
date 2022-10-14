@@ -22,10 +22,11 @@ public class Square extends Quadrilateral{
     }
 
 //    private int side;
-//    public Square(int sideLength){
+    public Square(int sideLength){
 //        super(sideLength,sideLength);
-//        this.side = sideLength;
-//    }
+        this.length = sideLength;
+        this.width = sideLength;
+    }
 //    public int getArea(){
 //        return this.side * this.side;
 //    }
