@@ -1,5 +1,7 @@
 package grades;
 
+import java.util.Scanner;
+
 public class StudentTest {
     public static void main(String[] args) {
 //        Student james = new Student("James");
@@ -8,5 +10,6 @@ public class StudentTest {
 //        james.addGrade(95);
 //        james.addGrade(67);
 //        System.out.printf("%s has a %s average.%n", james.getName(), james.getGradeAverage());
+
     }
 }
