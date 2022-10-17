@@ -9,6 +9,10 @@ public class Student {
         this.name = "student";
         this.grades = new ArrayList<>();
     }
+    public Student(String studentName){
+        this.name = studentName;
+        this.grades = new ArrayList<>();
+    }
     // returns the student's name
     public String getName(){
         return this.name;
