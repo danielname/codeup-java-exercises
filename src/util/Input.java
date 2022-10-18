@@ -25,7 +25,12 @@ public class Input {
     static int getInt(){
         Scanner scanner1 = new Scanner(System.in);
         System.out.println("Enter a number: ");
-        return scanner1.nextInt();
+        try{
+            return Integer.parseInt(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Try again");
+            return getInt();
+        }
     }
     static double getDouble(double min, double max){
         Scanner scanner1 = new Scanner(System.in);
@@ -38,7 +43,12 @@ public class Input {
     static double getDouble(){
         Scanner scanner1 = new Scanner(System.in);
         System.out.println("Enter a number: ");
-        return scanner1.nextDouble();
+        try{
+            return Double.parseDouble(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Try again");
+            return getDouble();
+        }
     }
 
     public static void main(String[] args) {
