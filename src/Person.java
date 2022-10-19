@@ -1,23 +1,23 @@
 import java.util.Scanner;
 public class Person {
     public Person(String a){
-        setName(a);
+        this.setName(a);
     }
-    private static String name;
-    public static String getName(){
+    private String name;
+    public String getName(){
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("What is your name?");
 //        String dnInputName = scanner.next();
 //        setName(dnInputName);
 //        return dnInputName;
-        return Person.name;
+        return this.name;
     }
 
-    public static void setName(String name){
-        Person.name = name;
+    public void setName(String name){
+        this.name = name;
         //need to set person.name to any name inputted as the argument.
     }
-    public static void sayHello(){
+    public void sayHello(){
         System.out.printf("Hello %s!%n",getName());
     }
     public static void main(String[] args) {
