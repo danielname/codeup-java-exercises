@@ -27,7 +27,7 @@ public class Input {
         System.out.println("Enter a number: ");
         try{
             return Integer.parseInt(getString());
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             System.out.println("Try again");
             return getInt();
         }
@@ -45,7 +45,7 @@ public class Input {
         System.out.println("Enter a number: ");
         try{
             return Double.parseDouble(getString());
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             System.out.println("Try again");
             return getDouble();
         }
