@@ -12,7 +12,7 @@ public class ArraysExercises {
         Person dn = new Person("Fernando");
         Person[] newperson = addPerson(people, dn);
 
-        System.out.println(people[3].getName());
+        System.out.println(people[1].getName());
     }
 
     public static Person[] addPerson(Person[] people, Person person){
