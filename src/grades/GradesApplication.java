@@ -1,7 +1,10 @@
 package grades;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+import static java.util.Map.entry;
+
 
 public class GradesApplication {
     public static void main(String[] args) {
@@ -12,6 +15,14 @@ public class GradesApplication {
         students.put("Pfirewire", new Student("Stephen"));
         students.put("nightzilla", new Student("Danny"));
         students.put("WoodyMas", new Student("Mason"));
+
+//        HashMap<String, Student> students = (HashMap<String, Student>) Map.ofEntries(
+//                entry("Maquis_the_coder", new Student("Deshawn")),
+//                entry("Pfirewire", new Student("Stephen")),
+//                entry("nightzilla", new Student("Danny")),
+//                entry("WoodyMas", new Student("Mason"))
+//        );
+
         students.get("Maquis_the_coder").addGrade(100);
         students.get("Maquis_the_coder").addGrade(98);
         students.get("Maquis_the_coder").addGrade(90);
