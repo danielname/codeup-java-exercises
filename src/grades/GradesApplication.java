@@ -2,6 +2,7 @@ package grades;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Scanner;
 import static java.util.Map.entry;
 
@@ -42,20 +43,31 @@ public class GradesApplication {
                 String key = student.getKey();
                 System.out.printf("|%s|", key);
             }
-            System.out.println("\nWhat student would you like to see more information on?");
+            System.out.println("\nWhat student would you like to see more information on? For all student grades type \"all\"");
             String studentChoice = scanner.nextLine();
-            if (!students.containsKey(studentChoice)) {
-                System.out.println("sorry, nobody with that username was found. Would you like to try again? y/n");
-            } else {
+            if (!students.containsKey(studentChoice) && !Objects.equals(studentChoice, "all")) {
+                System.out.println("sorry, nobody with that username was found.");
+            } else if (studentChoice.equals("all")){
+                for (Map.Entry<String, Student> student : students.entrySet()) {
+                    String key = student.getValue().getName();
+                    System.out.printf("%s's grades:%n", key);
+                    for(int i = 0; i < students.get(student.getKey()).getGrades().size(); i++){
+                        int gradeItem = students.get(student.getKey()).getGrades().get(i);
+                        System.out.printf("Assignment %d: %s%n", i+1, gradeItem);
+                    };
+                    System.out.println("--------------------");
+                }
+            }else {
                 System.out.printf("""
                         Name: %s - GitHub Username: %s%n
-                        Current Average: %s%n""",students.get(studentChoice).getName(), studentChoice, students.get(studentChoice).getGradeAverage());
-                for(int i = 0; i < students.get(studentChoice).getGrades().size(); i++){
+                        Current Average: %s%n""", students.get(studentChoice).getName(), studentChoice, students.get(studentChoice).getGradeAverage());
+                //for loop that
+                for (int i = 0; i < students.get(studentChoice).getGrades().size(); i++) {
                     int gradeItem = students.get(studentChoice).getGrades().get(i);
-                    System.out.printf("Assignment %d: %s%n", i+1, gradeItem);
-                };
-                System.out.println("Would you like to see another student? y/n");
+                    System.out.printf("Assignment %d: %s%n", i + 1, gradeItem);
+                }
             }
+                System.out.println("Would you like to see another student? y/n");
                 char anotherStudent = scanner.next().charAt(0);
                 if (anotherStudent == 'y') {
                     continue;
