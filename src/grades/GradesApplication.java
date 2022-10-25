@@ -36,11 +36,12 @@ public class GradesApplication {
         students.get("WoodyMas").addGrade(80);
         students.get("WoodyMas").addGrade(90);
 
-        System.out.println("""
-                           Welcome!\n
-                           Here are the GitHub usernames of our students:\n
-                           |Maquis_the_coder| |Pfirewire| |nightzilla| |WoodyMas|\n
-                           What student would you like to see more information on?""");
+        System.out.println("Welcome!\nHere are the GitHub usernames of our students:");
+                for(Map.Entry<String, Student> student: students.entrySet()){
+                    String key = student.getKey();
+                    System.out.printf("|%s|", key);
+                }
+        System.out.println("\nWhat student would you like to see more information on?");
         String studentChoice = scanner.nextLine();
         if (!students.containsKey(studentChoice)){
             System.out.println("sorry, nobody with that username was found. Would you like to try again? y/n");
