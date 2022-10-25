@@ -8,7 +8,7 @@ public class HighLow {
         int answer = rnd.nextInt(100) + 1;
 
         // i is going to keep track of guesses with the upper condition being the limit of how many the player is allower
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 7; i++) {
             int guess = getGuessFromUser();
 
             if (guess < answer) {
@@ -22,7 +22,6 @@ public class HighLow {
                 System.exit(0);
             }
         }
-
         System.out.println("You lose!");
     }
         private static int getGuessFromUser () {

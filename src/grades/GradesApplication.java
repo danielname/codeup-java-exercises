@@ -35,26 +35,29 @@ public class GradesApplication {
         students.get("WoodyMas").addGrade(85);
         students.get("WoodyMas").addGrade(80);
         students.get("WoodyMas").addGrade(90);
-
         System.out.println("Welcome!\nHere are the GitHub usernames of our students:");
-                for(Map.Entry<String, Student> student: students.entrySet()){
-                    String key = student.getKey();
-                    System.out.printf("|%s|", key);
-                }
-        System.out.println("\nWhat student would you like to see more information on?");
-        String studentChoice = scanner.nextLine();
-        if (!students.containsKey(studentChoice)){
-            System.out.println("sorry, nobody with that username was found. Would you like to try again? y/n");
-        } else {
-            System.out.printf("""
-                            Name: %s - GitHub Username: %s%n
-                            Current Average: %s%n
-                            %nWould you like to see another student? y/n%n""", students.get(studentChoice).getName(), studentChoice, students.get(studentChoice).getGradeAverage());
-            char anotherStudent = scanner.next().charAt(0);
-            if (anotherStudent == 'y'){
-                System.out.println("too bad.");
+        STUDENTSAPP:
+        while(true) {
+            for (Map.Entry<String, Student> student : students.entrySet()) {
+                String key = student.getKey();
+                System.out.printf("|%s|", key);
+            }
+            System.out.println("\nWhat student would you like to see more information on?");
+            String studentChoice = scanner.nextLine();
+            if (!students.containsKey(studentChoice)) {
+                System.out.println("sorry, nobody with that username was found. Would you like to try again? y/n");
             } else {
-                System.out.println("ok, have a nice day!");
+                System.out.printf("""
+                        Name: %s - GitHub Username: %s%n
+                        Current Average: %s%n
+                        %nWould you like to see another student? y/n%n""", students.get(studentChoice).getName(), studentChoice, students.get(studentChoice).getGradeAverage());
+                char anotherStudent = scanner.next().charAt(0);
+                if (anotherStudent == 'y') {
+                    continue;
+                } else {
+                    System.out.println("ok, have a nice day!");
+                    break;
+                }
             }
         }
     }
