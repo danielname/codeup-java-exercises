@@ -49,8 +49,12 @@ public class GradesApplication {
             } else {
                 System.out.printf("""
                         Name: %s - GitHub Username: %s%n
-                        Current Average: %s%n
-                        %nWould you like to see another student? y/n%n""", students.get(studentChoice).getName(), studentChoice, students.get(studentChoice).getGradeAverage());
+                        Current Average: %s%n""",students.get(studentChoice).getName(), studentChoice, students.get(studentChoice).getGradeAverage());
+                for(int i = 0; i < students.get(studentChoice).getGrades().size(); i++){
+                    int gradeItem = students.get(studentChoice).getGrades().get(i);
+                    System.out.printf("Assignment %d: %s%n", i+1, gradeItem);
+                };
+                System.out.println("Would you like to see another student? y/n");
             }
                 char anotherStudent = scanner.next().charAt(0);
                 if (anotherStudent == 'y') {
