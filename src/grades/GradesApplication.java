@@ -48,6 +48,7 @@ public class GradesApplication {
             if (!students.containsKey(studentChoice) && !Objects.equals(studentChoice, "all")) {
                 System.out.println("sorry, nobody with that username was found.");
             } else if (studentChoice.equals("all")){
+                double accum = 0;
                 for (Map.Entry<String, Student> student : students.entrySet()) {
                     String key = student.getValue().getName();
                     System.out.printf("%s's grades:%n", key);
@@ -57,6 +58,11 @@ public class GradesApplication {
                     };
                     System.out.println("--------------------");
                 }
+                for (Map.Entry<String, Student> student : students.entrySet()) {
+                    double key = student.getValue().getGradeAverage();
+                    accum += key;
+                }
+                System.out.printf("The class average is %s.%n", accum / students.size());
             }else {
                 System.out.printf("""
                         Name: %s - GitHub Username: %s%n
