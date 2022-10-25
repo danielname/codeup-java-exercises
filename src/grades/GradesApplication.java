@@ -51,6 +51,7 @@ public class GradesApplication {
                         Name: %s - GitHub Username: %s%n
                         Current Average: %s%n
                         %nWould you like to see another student? y/n%n""", students.get(studentChoice).getName(), studentChoice, students.get(studentChoice).getGradeAverage());
+            }
                 char anotherStudent = scanner.next().charAt(0);
                 if (anotherStudent == 'y') {
                     continue;
@@ -58,7 +59,6 @@ public class GradesApplication {
                     System.out.println("ok, have a nice day!");
                     break;
                 }
-            }
         }
     }
 }
